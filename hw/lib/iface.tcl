@@ -1,0 +1,32 @@
+# PRiME QSys interface flow
+# Exposes lightweight AXI interface for instrumentation control
+# James Davis, 2015
+
+package require -exact qsys 15.0
+
+load_system acl_iface_system.qsys
+
+add_instance prime_avalon_bridge altera_avalon_mm_bridge
+set_instance_parameter_value prime_avalon_bridge USE_AUTO_ADDRESS_WIDTH 1
+set_instance_parameter_value prime_avalon_bridge PIPELINE_COMMAND 0
+set_instance_parameter_value prime_avalon_bridge PIPELINE_RESPONSE 0
+add_connection config_clk.out_clk prime_avalon_bridge.clk
+add_connection global_reset.out_reset prime_avalon_bridge.reset
+add_connection mm_bridge_0.m0 prime_avalon_bridge.s0
+set_connection_parameter_value mm_bridge_0.m0/prime_avalon_bridge.s0 baseAddress 0x0
+add_interface prime_bus avalon master
+set_interface_property prime_bus EXPORT_OF prime_avalon_bridge.m0
+
+add_instance prime_clk_bridge altera_clock_bridge
+add_connection config_clk.out_clk prime_clk_bridge.in_clk
+add_interface prime_clk clk source
+set_interface_property prime_clk EXPORT_OF prime_clk_bridge.out_clk
+
+add_instance prime_rst_bridge altera_reset_bridge
+set_instance_parameter_value prime_rst_bridge ACTIVE_LOW_RESET 1
+set_instance_parameter_value prime_rst_bridge SYNCHRONOUS_EDGES none
+add_connection global_reset.out_reset prime_rst_bridge.in_reset
+add_interface prime_rstn reset source
+set_interface_property prime_rstn EXPORT_OF prime_rst_bridge.out_reset
+
+save_system
