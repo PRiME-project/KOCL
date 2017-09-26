@@ -27,7 +27,7 @@ The KOCL Offline Compiler (KOC) requires kernel code to exist in a separate `.cl
 
 Make sure that at least the `hw` and your application directories are on your development machine before continuing. Let's assume everything's inside directory `KOCL`.
 
-If your Altera install directory is not the default `/mnt/applications/altera/15.0`, modify `hw/prime_env.sh` as needed before continuing.
+If your Altera install directory is not the default `/mnt/applications/altera/15.0`, modify `hw/koc_env.sh` as needed before continuing.
 
 Set up your environment for KOC by executing:
 
