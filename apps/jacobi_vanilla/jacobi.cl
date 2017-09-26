@@ -8,7 +8,7 @@ x: pointer to (N x 1) vector x */
 
 __attribute__((reqd_work_group_size(N, 1, 1)))
 __attribute__((max_work_group_size(N)))
-__kernel void jacobi_float(__global const float* restrict A, __global const float* restrict b, __global float* restrict x) {
+__kernel void jacobi_float(__global const float* A, __global const float* b, __global float* x) {
 	
 	int i = get_global_id(0);
 	int j;
@@ -33,7 +33,7 @@ x: pointer to (N x 1) vector x */
 
 __attribute__((reqd_work_group_size(N, 1, 1)))
 __attribute__((max_work_group_size(N)))
-__kernel void jacobi_double(__global const double* restrict A, __global const double* restrict b, __global double* restrict x) {
+__kernel void jacobi_double(__global const double* A, __global const double* b, __global double* x) {
 	
 	int i = get_global_id(0);
 	int j;

@@ -1,4 +1,4 @@
-kernel void float_add(__global const float* restrict x, __global const float* restrict y, __global float* restrict z){
+kernel void float_add(__global const float* x, __global const float* y, __global float* z){
 	int i = get_global_id(0);
 	int t;
 	for(t = 0; t < 1000; t++) {
@@ -6,7 +6,7 @@ kernel void float_add(__global const float* restrict x, __global const float* re
 	}
 }
 
-kernel void float_mult(__global const float* restrict x, __global const float* restrict y, __global float* restrict z){
+kernel void float_mult(__global const float* x, __global const float* y, __global float* z){
 	int i = get_global_id(0);
 	int t;
 	for(t = 0; t < 1000; t++) {

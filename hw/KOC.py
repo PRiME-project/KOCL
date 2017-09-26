@@ -4,7 +4,7 @@
 # Builds KAPow-instrumentated OpenCL kernel systems
 # James Davis, 2015
 
-# Usage: ./KOC.py <OPENCL_KERNEL_FILE (.cl)> [-k <KERNELS {"kernel_1 kernel_2 ..."|none|all}>] [-b <BOARD_TO_TARGET>] [-n <KAPOW_N>] [-w <KAPOW_W>]
+# Usage: ./koc.py <OPENCL_KERNEL_FILE (.cl)> [-k <KERNELS {"kernel_1 kernel_2 ..."|none|all}>] [-b <BOARD_TO_TARGET>] [-n <KAPOW_N>] [-w <KAPOW_W>]
 # Prerequesites: python, aoc, quartus_sh and qsys-script paths must be in PATH
 
 import argparse

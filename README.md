@@ -23,25 +23,25 @@ Your [Cyclone V Soc Development Kit](https://www.altera.com/products/boards_and_
 
 ### Kernel Code
 
-The KOCL Offline Compiler (KOC), since it's built on top of the Altera Offline Compiler (AOC), requires kernel code to exist in a separate `.cl` file. Ensure that your kernel and host code are suitably split before continuing. There are a few sample applications available in `apps` that conform to this standard; you can use one of these as-is, modify one of them or make your own that is similarly structured.
+The KOCL Offline Compiler (KOC) requires kernel code to exist in a separate `.cl` file. Ensure that your kernel and host code are suitably split before continuing. There are a few sample applications available in `apps` that conform to this standard; you can use one of these as-is, modify one of them or make your own that is similarly structured.
 
 Make sure that at least the `hw` and your application directories are on your development machine before continuing. Let's assume everything's inside directory `KOCL`.
 
 If your Altera install directory is not the default `/mnt/applications/altera/15.0`, modify `hw/prime_env.sh` as needed before continuing.
 
-Set up your environment for KOC/AOC by executing:
+Set up your environment for KOC by executing:
 
-	source KOCL/hw/aoc_env.sh
+	source KOCL/hw/koc_env.sh
 
 Run the complete flow, from `.cl` to instrumented bitstream, by executing:
 
-	KOCL/hw/KOC.py <path to .cl file>
+	KOCL/hw/koc.py <path to .cl file>
 	
 There are several optional flags: `-k`, `-b`, `-n` and `-w`.
 
 `-k` allows you to choose which kernels to instrument. You can supply `all`, `none` or a space-separated list of kernel names. The default is `all`. `none` will instrument none of your kernels: your build will have the same result as running `aoc` instead. A subset might look like:
 
-	KOCL/hw/KOC.py KOCL/apps/int_add_mult/int_add_mult.cl -k "int_add int_mult"
+	KOCL/hw/koc.py KOCL/apps/int_add_mult/int_add_mult.cl -k "int_add int_mult"
 	
 `-b` allows you to choose the board you wish to target. We only support the Cyclone V at the moment, so leave this set to its default of `c5soc`.
 
