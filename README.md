@@ -108,5 +108,5 @@ Run your application:
 
 ### Support
 	
-Please contact [James Davis](james.davis06@imperial.ac.uk) if you have any problems with this tool or would like to offer any suggestions for its improvement.
+Please contact [James Davis](mailto:james.davis@imperial.ac.uk) if you have any problems with this tool or would like to offer any suggestions for its improvement.
 	
