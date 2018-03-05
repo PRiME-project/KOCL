@@ -19,7 +19,7 @@ On your Linux development machine, you will need:
 * [OpenCL SDK](http://dl.altera.com/opencl/15.0/?platform=linux&download_manager=direct)
 * [Python 2.7](https://www.python.org/downloads/release/python-2711/)
 
-Your [Cyclone V Soc Development Kit](https://www.altera.com/products/boards_and_kits/dev-kits/altera/kit-cyclone-v-soc.html) needs to be running Linux. You can download a fully functional image based on Ubuntu Core 16.04.2 [here](https://imperialcollegelondon.app.box.com/s/2tj5vwxnfrpprtgjg2ns1expl8ipfv9q).
+Your [Cyclone V Soc Development Kit](https://www.altera.com/products/boards_and_kits/dev-kits/altera/kit-cyclone-v-soc.html) needs to be running Linux. You can download a fully functional image based on Ubuntu Core 16.04.2 [here](https://imperialcollegelondon.app.box.com/s/2tj5vwxnfrpprtgjg2ns1expl8ipfv9q). Use `root` and `root` to log in.
 
 ### Kernel Code
 
