@@ -9,7 +9,7 @@ If you make use of this code, please acknowledge us by citing [our article](http
 	@article{KOCL,
 		author={J. J. Davis and J. M. Levine and E. A. Stott and E. Hung and P. Y. K. Cheung and G. A. Constantinides},
 		journal={IEEE Design \& Test},
-		title={KOCL: Power Self-awareness for Arbitrary FPGA-SoC-accelerated OpenCL Applications},
+		title={{KOCL: Power Self-awareness for Arbitrary FPGA-SoC-accelerated OpenCL Applications}},
 		year={2017},
 		volume={34},
 		number={6}
