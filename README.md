@@ -4,7 +4,16 @@
 
 This code is distributed under the terms of the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). See the [licence file](LICENCE.txt) for more information.
 
-If you make use of this code, please acknowledge us by citing [our article](http://ieeexplore.ieee.org/document/8031047/).
+If you make use of this code, please acknowledge us by citing [our article](http://ieeexplore.ieee.org/document/8031047/):
+
+	@article{KOCL,
+		author={J. J. Davis and J. M. Levine and E. A. Stott and E. Hung and P. Y. K. Cheung and G. A. Constantinides},
+		journal={IEEE Design \& Test},
+		title={KOCL: Power Self-awareness for Arbitrary FPGA-SoC-accelerated OpenCL Applications},
+		year={2017},
+		volume={34},
+		number={6}
+	}
 
 ### Disclaimer
 
