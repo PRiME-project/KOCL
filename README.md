@@ -44,13 +44,13 @@ Set up your environment for KOC by executing:
 
 Run the complete flow, from `.cl` to instrumented bitstream, by executing:
 
-	KOCL/hw/koc.py <path to .cl file>
+	python KOCL/hw/koc.py <path to .cl file>
 	
 There are several optional flags: `-k`, `-b`, `-n` and `-w`.
 
 `-k` allows you to choose which kernels to instrument. You can supply `all`, `none` or a space-separated list of kernel names. The default is `all`. `none` will instrument none of your kernels: your build will have the same result as running `aoc` instead. A subset might look like:
 
-	KOCL/hw/koc.py KOCL/apps/int_add_mult/int_add_mult.cl -k "int_add int_mult"
+	python KOCL/hw/koc.py KOCL/apps/int_add_mult/int_add_mult.cl -k "int_add int_mult"
 	
 `-b` allows you to choose the board you wish to target. We only support the Cyclone V at the moment, so leave this set to its default of `c5soc`.
 
@@ -62,7 +62,7 @@ Depending on the complexity of the required hardware, this could take several ho
 
 ### Incorporating KOCL in Host Code
 
-This section is optional. If you don't want to add power monitoring functionality to your host code, skip this section.
+This section is optional. If you don't want to add power monitoring functionality to your host code, skip this section. The (non-"vanilla") sample applications already have this code inserted.
 
 Include KOCL's header file in your host code to expose its functions:
 
